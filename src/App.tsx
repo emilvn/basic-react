@@ -2,6 +2,7 @@ import { useState } from "react";
 import PropsDemo from "./exercises/PropsDemo.tsx";
 import MenuButton from "./components/MenuButton.tsx";
 import ListDemo from "./exercises/ListDemo.tsx";
+import EventDemo1 from "./exercises/EventDemo.tsx";
 
 function App() {
     const [selectedView, setSelectedView] = useState("info");
@@ -26,6 +27,7 @@ function App() {
                         {selectedView == "info" && <p>All exercises for React day-1</p>}
                         {selectedView == "props1" && <PropsDemo title={"Props Demo1"}/>}
                         {selectedView == "listdemo" && <ListDemo title={"List Demo"} />}
+                        {selectedView == "eventdemo1" && <EventDemo1 title={"Event Demo1"}/>}
                     </div>
                 </div>
             </div>
@@ -48,6 +50,9 @@ const Buttons = (props: ButtonProps) => {
             </MenuButton>
             <MenuButton onClick={() => handleSelected("listdemo")}>
                 List demo
+            </MenuButton>
+            <MenuButton onClick={() => handleSelected("eventdemo1")}>
+                Event demo1
             </MenuButton>
         </>
     );
