@@ -7,6 +7,7 @@ import FormUncontrolled from "./exercises/FormsUncontrolled.tsx";
 import StateDemo1 from "./exercises/StateDemo1.tsx";
 import StateDemo2 from "./exercises/StateDemo2.tsx";
 import StateDemo3 from "./exercises/StateDemo3.tsx";
+import UseEffectDemo from "./exercises/UseEffectDemo.tsx";
 
 function App() {
 	const [selectedView, setSelectedView] = useState("info");
@@ -36,6 +37,7 @@ function App() {
 						{selectedView == "statedemo1" && <StateDemo1 title={"State Demo1"} />}
 						{selectedView == "statedemo2" && <StateDemo2 title={"State Demo2"} />}
 						{selectedView == "statedemo3" && <StateDemo3 title={"State Demo3"} />}
+						{selectedView == "useeffectdemo" && <UseEffectDemo title={"Use Effect Demo"}/>}
 					</div>
 				</div>
 			</div>
@@ -74,6 +76,9 @@ const Buttons = (props: ButtonProps) => {
 			</MenuButton>
 			<MenuButton onClick={() => handleSelected("statedemo3")}>
 				State Demo3
+			</MenuButton>
+			<MenuButton onClick={() => handleSelected("useeffectdemo")}>
+				Use Effect Demo
 			</MenuButton>
 		</>
 	);
