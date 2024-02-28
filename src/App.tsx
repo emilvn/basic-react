@@ -10,6 +10,7 @@ import StateDemo3 from "./exercises/StateDemo3.tsx";
 import UseEffectDemo from "./exercises/UseEffectDemo.tsx";
 import FetchDemo1 from "./exercises/FetchDemo.tsx";
 import LiftingState from "./exercises/LiftingState.tsx";
+import ContextDemoApp from "./exercises/ContextDemo.tsx";
 
 function App() {
 	const [selectedView, setSelectedView] = useState("info");
@@ -42,6 +43,7 @@ function App() {
 						{selectedView == "useeffectdemo" && <UseEffectDemo title={"Use Effect Demo"}/>}
 						{selectedView == "fetchdemo1" && <FetchDemo1 title={"Fetch Demo1"} />}
 						{selectedView == "liftingstate" && <LiftingState title={"Lifting State"}/>}
+						{selectedView == "contextdemo" && <ContextDemoApp title={"Context Demo"} />}
 					</div>
 				</div>
 			</div>
@@ -89,6 +91,9 @@ const Buttons = (props: ButtonProps) => {
 			</MenuButton>
 			<MenuButton onClick={() => handleSelected("liftingstate")}>
 				Lifting State
+			</MenuButton>
+			<MenuButton onClick={() => handleSelected("contextdemo")}>
+				Context Demo
 			</MenuButton>
 		</>
 	);
