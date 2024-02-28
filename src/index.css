@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+    @apply max-w-screen-xl;
+    @apply mx-auto;
+    @apply my-0;
+    @apply text-center;
+    @apply font-mono;
+}
