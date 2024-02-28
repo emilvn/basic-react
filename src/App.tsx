@@ -3,6 +3,7 @@ import PropsDemo from "./exercises/PropsDemo.tsx";
 import MenuButton from "./components/MenuButton.tsx";
 import ListDemo from "./exercises/ListDemo.tsx";
 import EventDemo1 from "./exercises/EventDemo.tsx";
+import FormUncontrolled from "./exercises/FormsUncontrolled.tsx";
 
 function App() {
     const [selectedView, setSelectedView] = useState("info");
@@ -28,6 +29,7 @@ function App() {
                         {selectedView == "props1" && <PropsDemo title={"Props Demo1"}/>}
                         {selectedView == "listdemo" && <ListDemo title={"List Demo"} />}
                         {selectedView == "eventdemo1" && <EventDemo1 title={"Event Demo1"}/>}
+                        {selectedView == "formsuncontrolled" && <FormUncontrolled title={"Forms Uncontrolled"}/>}
                     </div>
                 </div>
             </div>
@@ -53,6 +55,9 @@ const Buttons = (props: ButtonProps) => {
             </MenuButton>
             <MenuButton onClick={() => handleSelected("eventdemo1")}>
                 Event demo1
+            </MenuButton>
+            <MenuButton onClick={() => handleSelected("formsuncontrolled")}>
+                Forms Uncontrolled
             </MenuButton>
         </>
     );
