@@ -28,8 +28,8 @@ export default function UserForm({ title, onSubmitUser }: UserFormProps) {
 		<>
 			<h2 className="text-xl">{title}</h2>
 			<form onSubmit={onSubmit} className="flex flex-col gap-1">
-				First Name: <input name="name" ref={nameRef} />
-				Email: <input name="email" ref={emailRef}/>
+				First Name: <input className="border" name="name" ref={nameRef} />
+				Email: <input className="border" name="email" ref={emailRef}/>
 				<span>Active: <input type="checkbox" name="isActive" ref={isActiveRef} /></span>
 				<button className="bg-blue-500 hover:bg-blue-600 w-1/2 rounded-lg text-slate-50" type="submit">Add User</button>
 			</form>
